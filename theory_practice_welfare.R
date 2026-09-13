@@ -3,7 +3,7 @@
 # Uses gamma_5yr, the final restricted calibration sample. Member-level calculations use recorded age, depot, premium, calibrated gamma and risk profile.
 required_objects <- c("gamma_5yr", "returns", "variance_matrix", "pf")
 missing_objects <- required_objects[!vapply(required_objects, exists, logical(1), inherits = TRUE)]
-if (length(missing_objects) > 0) {stop(paste0("Run source('code/calibration_analysis.R') first. Missing objects: ", paste(missing_objects, collapse = ", ")))}
+if (length(missing_objects) > 0) {stop(paste0("Run source('calibration_analysis.R') first. Missing objects: ", paste(missing_objects, collapse = ", ")))}
 
 figure_dir <- "figures"
 results_dir <- "results"
